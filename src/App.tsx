@@ -1,24 +1,26 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import SampleComponent from './components/SampleComponent';
+import CustomSelect from './components/CustomSelect';
+import { Box } from '@mui/material';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Box width="100%" height="100vh" display="flex" justifyContent="center" alignItems="center" marginY="32px">
+        <Box width="300px">
+          <CustomSelect
+            placeholder="placeholder"
+            value="hi"
+            items={[
+              {id: '1', label: 'opcion 1'},
+              {id: '2', label: 'opcion 2'},
+            ]}
+            onClick={() => {}}
+          />
+        </Box>
+      </Box>
     </div>
   );
 }
